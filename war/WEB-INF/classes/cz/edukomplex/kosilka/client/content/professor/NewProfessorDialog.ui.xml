@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+	<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<table>
+			<tr>
+				<td><g:Label text="{cc.titleBefore}"/></td>
+				<td><g:TextBox ui:field="titleBeforeTextBox"/></td>
+			</tr>
+			<tr>
+				<td><g:Label text="{cc.firstname}"/></td>
+				<td><g:TextBox ui:field="firstNameTextBox"/></td>
+			</tr>
+			<tr>
+				<td><g:Label text="{cc.lastname}"/></td>
+				<td><g:TextBox ui:field="lastNameTextBox"/></td>
+			</tr>
+			<tr>
+				<td><g:Label text="{cc.titleBehind}"/></td>
+				<td><g:TextBox ui:field="titleBehindTextBox"/></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="{res.applicationStyle.alignRight}">
+					<g:Button ui:field="cancelBtn" text="{cc.cancelBtn}"/>
+					<g:Button ui:field="okBtn" text="{cc.okBtn}"/>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

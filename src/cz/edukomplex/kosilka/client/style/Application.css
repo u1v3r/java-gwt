@@ -1,0 +1,85 @@
+@CHARSET "UTF-8";
+
+@def brightColor #E3E9FF;
+@def darkColor #BBCCFF;
+@def borderColor #D4D4D4;
+@def blockContentHeadHeight 60px;
+	
+.actionPanel{	
+	padding: 5px 5px 5px 5px;
+	background-color: brightColor;
+	border-bottom: 1px solid borderColor;	
+}
+
+.brightColorStyle{
+	background-color: brightColor;
+}
+
+.alignRight{
+	text-align: right;	
+}
+.alignLeft{
+	text-align: left;	
+}
+
+.blockContentBorder{
+	border-left: 5px solid brightColor;	
+	border-right: 5px solid brightColor;
+}
+
+.scrollPanel{			
+	margin: 0px 0px 0px 0px;
+	border: 1px solid #d4d4d4;
+}
+
+.border{
+	border: 1px solid borderColor;
+}
+
+.cellTableHead{
+	padding: 5px;
+	border: 0px;
+	background-color: brightColor;
+	margin: 0px 0px 0px 0px;
+}
+.cellListPanel{
+	
+}
+.white{
+	color: brightColor;
+	background-color: brightColor;
+}
+.black{
+	color: black;
+	background-color: white;
+}
+.borderLeft{
+	border-left: 1px solid black;
+	background-color: black;
+}
+.borderRight{
+	border-right: 1px solid borderColor;
+}
+
+.infoMessageBox,.errorMessageBox{
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	background-color: #FFF8A7;
+	padding: 5px 10px 5px 10px;
+	border: 1px solid #FFCD67;
+	font-weight: bold;
+	color: #282828;
+	margin-left: -150px;
+}
+
+.errorMessageBox{
+	background-color: #F08682;
+	border: 1px solid #BF0303;
+	color: #9C0F0F;
+}
+
+/*	Maximálna šírka input boxov v tabulkach */
+table input{
+	width: 100%;
+}

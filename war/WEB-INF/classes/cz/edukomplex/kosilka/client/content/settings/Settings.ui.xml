@@ -1,0 +1,24 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:block="urn:import:cz.edukomplex.kosilka.client.content.block"
+	xmlns:professor="urn:import:cz.edukomplex.kosilka.client.content.professor">	
+	<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+	<ui:style>
+		
+	</ui:style>
+	<g:TabLayoutPanel barHeight="3" barUnit="EM" >
+		<g:tab>
+			<g:customHeader size="7">
+				<g:Label text="{cc.studyFieldsTab}"/>
+			</g:customHeader>			
+			<block:BlockContent ui:field="blockContent"/>			
+		</g:tab>
+		<g:tab>
+			<g:customHeader size="7">
+				<g:Label text="{cc.professorsTab}"/>
+			</g:customHeader>
+			<professor:ProfessorContent/>
+		</g:tab>		
+	</g:TabLayoutPanel>
+</ui:UiBinder> 

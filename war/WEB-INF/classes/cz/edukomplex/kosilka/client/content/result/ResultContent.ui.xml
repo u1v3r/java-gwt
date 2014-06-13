@@ -1,0 +1,54 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">
+
+	<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+	<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+	
+	<ui:style>
+		.searchContainer {border: 1px solid black;width: 100%;}
+		.center{vertical-align: middle;}	
+	</ui:style>
+
+	<g:DockLayoutPanel unit="PX">
+		<g:north size="40">
+			<g:HTMLPanel styleName="{res.applicationStyle.cellTableHead}">
+				<g:SimplePanel ui:field="actionPanel">
+					<g:HTMLPanel><table><tr>
+						<td><g:Label text="{cc.resultTable}"/></td>
+						<td><g:ListBox ui:field="exportTableListBox">
+							<g:item value="1">HTML</g:item>
+							<g:item value="0">PDF</g:item>							
+						</g:ListBox></td>
+						<td><g:Button ui:field="exportTableButton" text="{cc.exportBtn}"/></td>
+						<td></td>
+						<td><g:Label text="{cc.protocol}"/></td>
+						<td><g:ListBox ui:field="exportProtocolListBox">
+							<g:item value="3">Word</g:item>
+							<g:item value="2">OpenOffice</g:item>
+						</g:ListBox></td>
+						<td><g:Button ui:field="exportProtocolButton" text="{cc.exportBtn}"/></td>
+					</tr></table></g:HTMLPanel>
+				</g:SimplePanel>
+			</g:HTMLPanel>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel styleName="{res.applicationStyle.scrollPanel}"
+				ui:field="scrollPanel">
+				<g:Grid width="100%">
+					<g:row>
+						<g:customCell>
+							<g:SimplePanel ui:field="cellTableWrapper" width="100%" />
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell>
+							<g:HorizontalPanel ui:field="pagerWrapper" width="100%" horizontalAlignment="center"/>							
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder>

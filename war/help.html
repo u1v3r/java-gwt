@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Nápoveda</title>
+<style type="text/css">
+  p,ul{font-size: 12px;}
+  p.warning{font-style: italic;}
+  h1,h2,p,ul{color:black;}
+  img{border: 1px solid gray;margin: 10px;}
+  
+</style>
+</head>
+<body>
+<a href="#begin"></a><h1>Obsah:</h1>
+<ul>
+	<li><a href="#resultsManagement">Správa výsledkov</a></li>
+		<ul>
+			<li><a href="#addQuestionNumber">Vloženie čísla otázky</a></li>
+			<li><a href="#addGrade">Vloženie hodnotenia študenta</a></li>			
+			<li><a href="#exportProtocolHtml">Náhľad protokolu</a></li>
+			<li><a href="#exportTable">Export výsledkov v podobne súhrnej tabulky</a></li>			
+			<li><a href="#exportProtocol">Export výsledkov v podobne protokolu</a></li>
+		</ul>
+	
+	<li><a href="#harmonogramManagement">Správa harmonogramov</a></li>
+		<ul>
+			<li><a href="#addNewHarmonogram">Vytvorenie nového harmonogramu</a></li>
+			<li><a href="#editHarmonogram">Úprava vytvoreného harmonogramu</a></li>
+			<li><a href="#deleteHarmonogram">Odstránenie harmonogramu</a></li>
+			<li><a href="#addStudentToHarmongram">Priradenie študenta do harmonogramu</a></li>
+			<li><a href="#deleteStudentFromHarmonogram">Odstránenie študenta z harmonogramu</a></li>
+			<li><a href="#setBachelorThesis">Vloženie témy bakalárskej práce pre študenta</a></li>			
+		</ul>
+		
+	<li><a href="#subjectsManagement">Správa predmetov</a></li>
+		<ul>
+			<li><a href="#addNewSubject">Vytvorenie nového predmetu</a></li>
+			<li><a href="#editSubject">Úprava vytvoreného predmetu</a></li>
+			<li><a href="#addSubjectToBlock">Pridelenie predmetu do odborného bloku</a></li>
+			<li><a href="#deleteSubjectFromBlock">Odstránenie predmetu z oborného bloku</a></li>
+		</ul>
+</ul>
+
+
+<h1 id="resultsManagement">Správa výsledkov</h1>
+<p>
+Výsledky pre jednotlivých študentov je možné spravovať v záložke s názvom "Výsledky". Najskôr je však nutné si vybrať správny
+akademický rok, do ktorého harmonogram patrí a následné zvoliť vám pridelený harmonogram (viz. nasledujúci obrázok).
+</p>
+<img src="img/resultsManagement.jpg"></img>
+<p>
+V tejto časti je možné pridelovať študentom hodnotenia za všetky predmety z odborného bloku, hodnotenia vedúceho, oponenta a ďalšie.
+Najskôr je však nutné vložiť číslo otázky, ktorú si študent vybral.
+</p>
+
+<h2 id="addQuestionNumber">Vloženie čísla otázky</h2>
+<p>
+Vložiť číslo otázky je možné v záložke "Výsledky" vo stĺpcí s názvom "Otázka".
+</p>
+<img src="img/addQuestionNumber.jpg"></img>
+
+<h2 id="addGrade">Vloženie hodnotenia študenta</h2>
+<p>
+V záložke "Výsledky" je taktiež možné vkladať známky za jednotlivé častí SZZ. Polia slúžiace na vkladanie 
+známok sú zobrazené na nadledujúcom obrázku.
+</p>
+<img src="img/addGrade.jpg"></img>
+
+
+<h2 id="exportTable">Export výsledkov v podobne súhrnej tabulky</h2>
+<p>
+Ak máte zapísané známky, tak je možné všetky známky exportovať v podobe súhrnej tabuľky. Pri exporte je 
+ale najskôr nutné vybrať študentov, ktorých výsledky sa budú exportovať. To je možné buď jednotlivo 
+pomocou checkboxov v ľavej časti každého riadku (viz. nadledujúci obrázok).
+</p>
+<img src="img/exportTable1.jpg"></img>
+<p>
+Alebo je možné študentov taktiež vybrať hromadne. Hromadný výber je možné vykonať prostredníctvom checkboxu v záhlaví tabuľky.
+</p>
+<p class="warning">
+UPOZORNENIE: Študenta je možné vybrať len v prípade ak má pridelené všetky hodnotenia.
+</p>
+<img src="img/exportTable2.jpg"></img>
+<p>
+Samotný export je potom možné vykonať pomocou tlačidla s názvom "Exportovať" (viz. obrázok), pričom je možné si
+zvoliť z dvoch formátov, do ktorých sa bude exportovať (PDF a HTML). Kliknutie na tlačidlo "Exportovať" vyvolá
+dialóg s ponukou uloženie súboru na lokálny počítať v prípade formátu PDF a v prípade exportu do formátu HTML dôjde v prehliadači
+k vyvolaniu vyskakovacieho okna. 
+</p>
+<p class="warning">
+UPOZORNENIE: Pre export do formátu HTML je nutné mať vo webovom prehliadači povolené vyskakovacie okná.  
+</p>
+<img src="img/exportTable3.jpg"></img>
+
+<h2 id="exportProtocolHtml">Náhľad protokolu</h2>
+<p>
+Pred samotným exportom protokolu je možné sa pozrieť na náhľad protokolu vo formáte HTML. Náhľad je možné vyvolať 
+kliknutím na meno študenta, pre ktorého chcete náhľad vidieť.
+</p>
+<img src="img/exportProtocolHtml.jpg"></img>
+<p class="warining">
+UPOZORNENIE: Po kliknutí na meno študenta dôjde k vyvolaniu vyskakovacieho okna. Preto je nutné mať v prehliadači povolené
+vyskakovacie okná.
+</p>
+
+<h2 id="exportProtocol">Export výsledkov v podobne protokolu</h2>
+<p>
+Druhým druhom exportu výsledkov je export v podobe protokolu. Podobne ako v prípade 
+<a href="#exportTable">exportu súhrnej tabuľky</a>, je nutné najskôr vybrať študentov, ktorí sa budú exportovať.
+Exportovať študentov je potom možné prostredníctvom tlačidla "Exportovať" do dvoch formátov a to: Microsoft Word alebo Open Office.
+</p>
+<img src="img/exportProtocol.jpg"></img>
+
+
+<h1 id="harmonogramManagement">Správa harmonogramov</h1>
+<p>
+Správa harmonogramov prebieha v záložke s názvom "Študenti". V tejto časti je možné po <a href="#addNewHarmonogram">vytvorení
+harmonogramu</a> pridávať/odstraňovať študentov do/z harmonogramu, meniť poradie študentov, zadávať tému bakalárskej práce a ďalšie.
+</p>
+<p>
+Avšak najskôr je nutné v ľavom menu vybrať akademický rok a následne harmonogram, ktorý chcete upravovať.
+</p>
+<img src="img/harmonogramManagement.jpg"></img>
+
+
+<h2 id="addNewHarmonogram">Vytvorenie nového harmonogramu</h2>
+<p>
+Nový harmonogram je možné pridať po kliknutí na tlačidlo "Pridať".
+</p>
+<img src="img/addNewHarmonogram1.jpg"></img>
+<p>
+Po kliknutí dôjde k zobrazenia okna, v ktorom je možné zvloliť parametre daného harmonogramu:
+<ul>
+	<li>Meno - predstavuje meno harmonogramu, ktoré sa bude zobrazovať v menu</li>
+	<li>Použíť komisiu z harmonogramu - umožňuje znovu použiť už vytvorenú komisiu</li>
+	<li>Obor - určuje pre ktorý študijný obor je harmonogram vytvárany; na základe zvoleného oboru budú harmonogramu
+	priradené predmety</li>
+	<li>Miesto skúšky - určuje miesto, kde sa skúška koná; toto miesto bude zobrazené v protokole</li>
+	<li>Dátum skúšky - dátum skúšky, ktorý sa bude nachádzať v protokole; na základe zvoleného dátumu dôjde k automatickému
+	priradeniu harmonogramu k akademického roku</li>
+</ul>
+</p>
+<img src="img/addNewHarmonogram2.jpg"></img>
+
+
+<h2 id="editHarmonogram">Úprava vytvoreného harmonogramu</h2>
+<p>
+Upraviť jednotlivé parametre je možné po kliknutí na tlačidlo "+" nachádzajúce sa v pravej časti aplikácie. Po
+Kliknutí na toto tlačidlo dôjde k zobrazeniu panelu, pomocou ktorého je možné upraviť už vytvorený harmonogram.
+</p>
+<img src="img/editHarmonogram.jpg"></img>
+
+
+<h2 id="deleteHarmonogram">Odstránenie harmonogramu</h2>
+<p>
+Harmonogram je možné odstrániť kliknutím na tlačidlo "Odstrániť" v ľave časti aplikácie.
+</p>
+<p class="warning">
+UPOZORNENIE: Pri odstránení harmonogramu dôjde aj ku kompletnému odstráneniu všetkých pridelených známok.
+</p>
+<img src="img/deleteHarmonogram.jpg"></img>
+
+<h2 id="addStudentToHarmongram">Priradenie študenta do harmonogramu</h2>
+<p>
+Do harmonogramu je študenta možné pridať prostredníctvom lisboxov zobrazených na naslesledujúcom obrázku. V prvom
+listboxe je treba si vybrat akademické rok, v druhom triedu, do ktorej študent patrí a nakoniec je výber samotného
+študenta. Študenta je potom možné jenoducho pridať pomocou tlačidla "Pridať študenta".
+</p>
+<img src="img/addStudentToHarmonogram.jpg"></img>
+
+
+<h2 id="deleteStudentFromHarmonogram">Odstránenie študenta z harmonogramu</h2>
+<p>
+Študenta je možné jenoducho odstrániť po klniknutí na tlačidlo so symbolom "X" nachádzajúceho sa v tabulke v stĺpci
+odstrániť. Po takomto odstránení dôjde aj ku kompletnému odstránení všetkých zadaných hodnotení.
+</p>
+<img src="img/deleteStudentFromHarmonogram.jpg"></img>
+
+<h2 id="setBachelorThesis">Vloženie témy bakalárskej práce pre študenta</h2>	
+<p>
+Na to aby mohol byť vyexportovaný protokol, je najskôr nutné vložiť tému bakalárskej práce. To je možné po klknutí na riadok
+v tabuľke vo stĺpci s názvom "Téma bc práce". Po klknutí dôjde k zobrazeniu textového poľa, do ktorého je možné vpísať
+názov práce (viz. obrázok).
+</p>
+<img src="img/setBachelorThesis.jpg"></img>
+
+<h1 id="subjectsManagement">Správa predmetov</h1> 
+<p>
+V tejto časti prebieha správa odborných blokov a predmotov do nich patriacich. V ľavej spodnej časti menu s názvom "Predmety pre obory"
+sa nachádzajú jednotlivé obory. Po kliknutí na niektorý z týchto oborov dôjde k zobrazeniu tabuľky v ktorej je možné do daného oboru
+predmety vkladať, odstraňovať a upravovať otázky pre jednotlivé predmety.
+</p>
+<img src="img/subjectsManagement.jpg"></img>
+
+<h2 id="addNewSubject">Vytvorenie nového predmetu</h2>
+<p>
+Nový predmet je možné vytvoriť kliknutím na tlačidlo "Vytvoriť predmet".
+</p>
+<img src="img/addNewSubject1.jpg"></img>
+<p>
+Po kliknutí dôjde k zobrazeniu dialogu, v ktorom je možné zadať meno predmetu, skratku predmetu a jednotlivé otázky, ktoré
+predmet obsahuje.
+</p>
+<img src="img/addNewSubject2.jpg"></img>
+
+<h2 id="editSubject">Úprava vytvoreného predmetu</h2>
+<p>
+Už vytvorený predmet je možné upraviť po kliknutí na meno predmetu v tabuľke, kedy dôjde k zobrazeniu dialogu, v ktorom je
+možné upraviť vlastnosti daného predmetu.
+</p>
+<img src="img/editSubject1.jpg"></img>
+<p>
+Kliknutím na na text znenia otázky v tomto dialogu dôjde k zobrazeniu vstupného poľa, do ktorého je možné vpísať zmenený text
+otázky. Podobne je možné zmeniť aj číslo otázky
+</p>
+<img src="img/editSubject2.jpg"></img>
+
+<h2 id="addSubjectToBlock">Pridelenie predmetu do odborného bloku</h2>
+<p>
+Pridanie predmetu do odobrného bloku je možné prostredníctvom tlačidla "Pridať predmet".
+</p>
+<img src="img/addSubjectToBlock.jpg"></img>
+
+<h2 id="deleteSubjectFromBlock">Odstránenie predmetu z oborného bloku</h2>
+<p>
+Predmet je možné z odborného bloku odstrániť jednoducho kliknutí na symbol "X" nachádzajúceho sa v riadku odstraňoveného predmetu.
+</p>
+<img src="img/deleteSubjectFromBlock.jpg"></img>
+</body>
+</html>

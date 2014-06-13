@@ -1,0 +1,77 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:kosilka="urn:import:cz.edukomplex.kosilka.client.content">
+	
+	<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+	<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+	
+	<ui:style>
+		.actionPanel{
+			width: 100%;
+			background-color: #E3E9FF;
+			padding: 5px 5px 5px 5px;
+			margin-bottom: 1px;
+		}
+		.sectionHead{			
+			border-bottom: 1px solid #DDDDDD;
+			font-weight: bold;
+			font-size: 13px;
+			padding: 7px 5px 7px 5px;
+			background-color: #F5F8FF;
+		}
+		.cellList{
+			border-bottom: 3px solid #BBCCFF;
+		}
+		.contenWrapper{
+			border-left: 6px solid #BBCCFF;
+			border-right: 6px solid #BBCCFF;
+			border-top: 2px solid #BBCCFF;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="PX">
+		<g:north size="50">
+			<kosilka:HeaderPanel ui:field="headerPanel"/>
+		</g:north>
+		<g:center>
+			<g:DockLayoutPanel ui:field="contentContainer"
+				unit="PX">
+				<g:west size="195">					
+					<g:HTMLPanel>
+						<g:HTMLPanel styleName="{style.actionPanel}" width="195">							
+							<g:Button ui:field="addHarmonogramButton" text="{cc.addBtn}" />							
+							<g:Button ui:field="removeHarmonogramButton" text="{cc.deleteBtn}" visible="true"/>		
+						</g:HTMLPanel>						
+							<g:HTMLPanel ui:field="harmonogramStack">
+								<div class="{style.sectionHead}">
+									<table>
+										<tr>											 									
+											<td><g:Label text="{cc.academicYear}"/><g:ListBox ui:field="yearsListBox"/></td>
+											<td><g:Label text="{cc.month}"/><g:ListBox ui:field="monthListBox"/></td>
+										</tr>
+									</table>
+								</div>								
+							</g:HTMLPanel>
+							<g:ScrollPanel styleName="{style.cellList}" ui:field="harmonogramsScrollPanel">								
+									<c:CellList ui:field="harmonogramsCellList" />								
+							</g:ScrollPanel>
+							<!-- <g:HTMLPanel ui:field="studyFieldStack">
+								<div class="{style.sectionHead}"><g:Label text="{cc.studyFieldsSection}"/> </div>
+								<g:ScrollPanel styleName="{style.cellList}" ui:field="studyFieldsScrollPanel">
+									<c:CellList ui:field="studyFieldsCellList" />
+								</g:ScrollPanel>					
+							</g:HTMLPanel>	 -->	
+					</g:HTMLPanel>					
+				</g:west>
+				<g:center>	
+					<g:DockLayoutPanel ui:field="contentWrapper" unit="PX" styleName="{style.contenWrapper}" visible="false"/>									
+				</g:center>
+				<g:east size="325">
+					<kosilka:InfoPanel ui:field="infoPanel"
+						height="100px" />
+				</g:east>
+			</g:DockLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

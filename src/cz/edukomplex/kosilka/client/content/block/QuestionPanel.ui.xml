@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">	
+	<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+	<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+	
+	<ui:style>
+		.tableContainer{
+			width: 100%;
+			height: 100%; 
+		}
+	</ui:style>
+	
+	<g:HTMLPanel height="{res.applicationStyle.blockContentHeadHeight}" styleName="{res.applicationStyle.brightColorStyle}">	
+		<g:HTMLPanel ui:field="hidePanel" visible="false" height="100%">
+			<table class="{style.tableContainer}">
+				<tr>
+					<td class="{res.applicationStyle.alignLeft}"><g:Label text="{cc.subjectName}"/></td>
+					<td class="{res.applicationStyle.alignLeft}"><g:TextBox ui:field="subjectNameTextBox"/></td>
+					<td class="{res.applicationStyle.alignLeft}"><g:Label text="{cc.shortcut}"/></td>
+					<td class="{res.applicationStyle.alignLeft}"><g:TextBox ui:field="subjectShortTextBox"/></td>
+					<td class="{res.applicationStyle.alignRight}"><g:Button ui:field="saveBtn" text="{cc.saveBtn}"/></td>
+				</tr>
+			</table>	
+		
+			<table height="100%" width="100%">			
+				<tr>
+					<td colspan="2">
+						<g:ScrollPanel height="500px" ui:field="questionsScrollPanel">
+							<c:CellTable ui:field="questionsCellTable" width="100%" height="100%"/>
+						</g:ScrollPanel>
+					</td>				
+				</tr>
+				<tr>
+					<td style="width:100%;" >					
+						<g:TextBox ui:field="questionTextBox" width="100%"/>
+					</td>
+					<td class="{res.applicationStyle.alignRight}">
+						<g:Button ui:field="addQuestionBtn" text="{cc.addBtn}" />					
+					</td>
+				</tr>			
+			</table>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+	
+</ui:UiBinder> 

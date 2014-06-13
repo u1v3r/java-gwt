@@ -1,0 +1,10 @@
+<Files ~ "\.(doc|odt)$">
+  order allow,deny
+  deny from all
+</Files>
+<Files (protokol-html.html|ServiceHandler.php|bootstrap.php)>
+  order allow,deny
+  deny from all
+</Files>
+Options -Indexes
+DirectoryIndex KosilkaV3.html

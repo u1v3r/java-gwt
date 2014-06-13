@@ -1,0 +1,2 @@
+# Module cz.edukomplex.kosilka.xmlrpcservice.ServiceProxyGenerator
+# RPC service class, partial path of RPC policy file

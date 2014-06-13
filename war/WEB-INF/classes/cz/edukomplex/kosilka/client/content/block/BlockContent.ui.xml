@@ -1,0 +1,67 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client">	
+<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+<ui:style>
+	.head{
+		border-left: 5px solid black;
+		border-right: 5px solid green;
+		width: 100%;		
+	}
+</ui:style>
+
+	<g:DockLayoutPanel unit="PX">		
+		<!-- Study fields -->
+		<g:west size="200">
+			<g:DockLayoutPanel unit="PX">
+				<g:north size="60">
+					<g:HTMLPanel styleName="{res.applicationStyle.brightColorStyle}"/>
+				</g:north>
+				<g:center>
+					<g:ScrollPanel styleName="{res.applicationStyle.blockContentBorder}">
+						<c:CellList ui:field="studyFieldsCellList"/>
+					</g:ScrollPanel>
+				</g:center>
+			</g:DockLayoutPanel>
+		</g:west>
+		<!-- Subjects -->
+		<g:west size="250">
+			<g:DockLayoutPanel unit="PX">
+						<g:north size="60">
+							<g:HTMLPanel styleName="{res.applicationStyle.brightColorStyle}">
+								<g:HTMLPanel ui:field="hidePanel" visible="false" height="100%">
+									<table style="width:100%">
+										<tr>
+											<td colspan="2">
+												<g:ListBox ui:field="subjectsListBox" width="100%"/>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<g:Button ui:field="addSubjectBtn" text="{cc.addStubjectBtn}" />
+											</td>
+											<td class="{res.applicationStyle.alignRight}">
+												<g:Button ui:field="newSubjectBtn" text="{cc.newSubjectBtn}"/>
+											</td>
+										</tr>
+									</table>
+								</g:HTMLPanel>
+							</g:HTMLPanel>
+						</g:north>
+						<g:center>
+							<g:ScrollPanel styleName="{res.applicationStyle.blockContentBorder}">
+								<c:CellTable ui:field="subjectsCellTable" width="100%" visible="false"/>
+							</g:ScrollPanel>
+						</g:center>
+			</g:DockLayoutPanel>
+		</g:west>
+		<!-- Questions -->
+		<g:center>
+			<g:ScrollPanel styleName="{res.applicationStyle.blockContentBorder}">
+				<g:SimplePanel ui:field="questionPanelContainer" />
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>	
+</ui:UiBinder> 

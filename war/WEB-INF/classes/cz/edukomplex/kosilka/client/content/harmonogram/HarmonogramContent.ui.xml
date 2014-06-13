@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:harmonogram="urn:import:cz.edukomplex.kosilka.client.content.harmonogram"
+	xmlns:kosilka="urn:import:cz.edukomplex.kosilka.client.content">
+
+	<ui:with field="res"
+		type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources" />
+
+	<g:DockLayoutPanel unit="PX">
+		<g:north size="37">
+			<harmonogram:HarmonogramUserAddPanel
+				ui:field="userAddPanel"
+				styleName="{res.applicationStyle.cellTableHead}" />
+		</g:north>
+		<g:center>
+			<g:ScrollPanel styleName="{res.applicationStyle.scrollPanel}"
+				ui:field="scrollPanel">
+				<g:Grid width="100%">
+					<g:row>
+						<g:customCell>
+							<!-- <g:SimplePanel ui:field="cellTableWrapper" width="100%" /> -->
+							<c:CellTable ui:field="harmonogramsCellTable" width="100%" /> 
+						</g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

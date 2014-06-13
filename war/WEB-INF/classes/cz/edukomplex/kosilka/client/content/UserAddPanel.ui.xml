@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+
+	<g:HTMLPanel>
+		<g:FlowPanel>
+			<g:ListBox ui:field="yearListBox" />
+			<g:ListBox ui:field="groupListBox" />
+			<g:ListBox ui:field="studentListBox" />
+			<g:Button ui:field="addButton" text="{cc.addStudentBtn}" />
+			<!-- <g:Button ui:field="addAllButton" text="Pridať celú triedu" />  -->
+		</g:FlowPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.3  (Unix)">	
+	<STYLE TYPE="text/css">		
+		P { margin-bottom: 0.21cm }	
+		body{font-size: 10px;}	
+		table{font-size: 10px;}		
+	</STYLE>
+</HEAD>
+<BODY>
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT SIZE=5><B>ČESKÁ REPUBLIKA</B></FONT></P>
+<HR>
+<table width="100%">
+	<tr>
+		<td>
+			<table>
+				<tr><td>Vysoká škola:</td><td>{school}</td></tr>
+				<tr><td>Studijní odbor:</td><td>{studyfield_name}</td></tr>
+			</table>		
+		</td>
+		<td>
+			<table>
+				<tr><td>Akademickýrok:</td><td>{year}</td></tr>	
+				<tr><td>Forma studia:</td><td>{study_form}</td></tr>		
+			</table>
+		</td>	
+	</tr>	
+</table>
+
+<P ALIGN=CENTER STYLE="margin-bottom: 0cm"><FONT SIZE=5 STYLE="font-size: 18pt"><B>PROTOKOL O STÁTNÍ ZKOUŠCE</B></FONT></P>
+
+<table width="100%">
+	<tr>
+		<td>
+			<table>
+				<tr><td>Jméno a příjmení:</td><td><FONT SIZE=4>{student_name}</FONT></td></tr>				
+				<tr><td>Rodné čislo:</td><td>{identity_number}</td></tr>
+				<tr><td>Dátum narození:</td><td>{birth_date}</td></tr>
+				<tr><td>Dátum konaní SZ:</td><td>{exam_date}</td></tr>
+			</table>		
+		</td>
+		<td>
+			<table>
+				<tr><td>Místo narození:</td><td>{birth_place}</td></tr>	
+				<tr><td>Státní príslušnost:</td><td>{nationality}</td></tr>		
+			</table>
+		</td>	
+	</tr>	
+</table>
+
+<br/>
+<p style="padding-left: 3px"><B>Komisie pro státní zkoušky:</B></p>
+<br/>
+
+<table style="padding-top: 0px">
+	<tr><td><b>Předseda:</b></td><td>{chairman}</td></tr>
+	<tr><td><b>Místopředseda:</b></td><td>{vice_chairman}</td></tr>
+	<tr><td><b>Členové:</b></td><td>[!-- BEGIN commission_members --]{member}<br/>[!-- END commission_members --]</td></tr>
+	<tr><td><b>Tajemník:</b></td><td>{secretary}</td></tr>	
+</table>
+
+<br/>
+
+<table>
+	<tr>
+		<td>
+			<table>
+				<tr><td width="100px"><b>Prubeh SZZ:</b></td><td width="200px">1. Obhajoba:</td><td width="200px">{obhajoba_grade}</td></tr>	
+				<tr><td></td><td>2. Odborný blok:</td><td>{overall_subjects_grade}</td></tr>	
+				<tr><td></td><td><B>Celkový výsledek SZZ:</B></td><td><b>{overall_result}</b></td></tr>
+			</table>
+		</td>
+	</tr>	
+</table>
+
+<br/>
+<p style="padding-left: 3px;padding-bottom: 0px;margin-bottom: 0px;"><B>Podpisy členu komise:</B></p>
+<br/>
+<table>
+	<tr><td style="padding: 4px 0px 10px 0px;"><B>Podpis předsedy:</B></td><td>…..............................</td></tr>
+	<tr><td style="padding: 10px 0px 10px 0px;"><B>Podpis místopředsedy:</B></td><td>…..............................</td></tr>
+	<tr><td colspan="2" style="padding: 10px 0px 10px 0px;"><B>Podpisy členu komise:</B></td></tr>
+</table>
+
+
+<div>	
+	[!-- BEGIN signatures --]
+	<span style="padding: 10px 30px 10px 2px;float: left;">{professor_name}: .............................</span>
+	[!-- END signatures --]	
+</div>
+<div style="clear: both;"></div>
+
+<p style="padding-left: 3px">Podpis tajemníka: .............................</p>  
+<br/>
+<p style="padding-left: 3px">V {exam_place} dne {exam_date}</p>
+<span style="page-break-after: always;"></span>
+
+
+
+Dátum konaní SZ:	{exam_date}
+
+<br/>
+<p style="padding-left: 3px"><B>Komisie pro státní zkoušky:</B></p>
+<br/>
+
+<table style="padding-top: 0px">
+	<tr><td><b>Předseda:</b></td><td>{chairman}</td></tr>
+	<tr><td><b>Místopředseda:</b></td><td>{vice_chairman}</td></tr>
+	<tr><td><b>Členové:</b></td><td>[!-- BEGIN commission_members_2 --]{member}<br/>[!-- END commission_members_2 --]</td></tr>
+	<tr><td><b>Tajemník:</b></td><td>{secretary}</td></tr>	
+</table>
+
+<br/>
+
+<p style="padding-left: 3px"><U>1. Obhajoba bakalářské práce:</U></p>
+<table style="padding-left: 8px;">
+	<tr><td>Téma:</td><td>{bc_theme}</td></tr>
+	<tr><td>Hodnocení vedoucího BP:</td><td>{veduci_grade}</td></tr>
+	<tr><td>Hodnocení oponenta BP:</td><td>{oponent_grade}</td></tr>
+	<tr><td><b>Celkové hodnocení:</b></td><td><b>{obhajoba_grade}</b></td></tr>
+</table>
+
+<br/>
+
+<p style="padding-left: 3px"><U>2. Odborný blok</U></p>
+<table style="padding-left: 8px;">
+	<tr><td>
+		[!-- BEGIN subjects_legend --]{subject_legend}[!-- END subjects_legend --]<br/>
+		Číslo otázky a její znění: {question_number}<br/>
+		<br/>
+		[!-- BEGIN questions --]{pos}{subject_shortname}: {question}<br/>[!-- END questions --]		
+	</td></tr>
+</table>
+<table style="padding-left: 8px;" width="250px">	
+		[!-- BEGIN questions_result --]<tr><td>{pos}{subject_shortname}</td><td>{subject_result}</td></tr>[!-- END questions_result --]
+		<tr><td><b>Celkové hodnocení:</b></td><td><b>{overall_subjects_grade}</b></td></tr>
+</table>
+
+<hr/>
+
+<table>
+	<tr><td style="padding: 4px 0px 10px 0px;"><B>Podpis předsedy:</B></td><td>…..............................</td></tr>
+	<tr><td style="padding: 10px 0px 10px 0px;"><B>Podpis místopředsedy:</B></td><td>…..............................</td></tr>
+	<tr><td colspan="2" style="padding: 10px 0px 10px 0px;"><B>Podpisy členu komise:</B></td></tr>
+</table>
+
+<div>	
+	[!-- BEGIN signatures_2 --]
+	<span style="padding: 10px 30px 10px 2px;float: left;">{professor_name}: .............................</span>
+	[!-- END signatures_2 --]	
+</div>
+<div style="clear: both;"></div>
+
+<p style="padding-left: 3px">Podpis tajemníka: .............................</p>  
+<br/>
+<p style="padding-left: 3px">V {exam_place} dne {exam_date}</p>
+</BODY>
+</HTML>

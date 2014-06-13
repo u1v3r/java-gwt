@@ -1,0 +1,103 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:date="urn:import:com.google.gwt.user.datepicker.client">
+	
+<ui:with field="cc" type="cz.edukomplex.kosilka.client.i18n.KosilkaV3Constants"/>
+<ui:with field="res" type="cz.edukomplex.kosilka.client.style.MyResources.ApplicationResources"/>
+<ui:style>
+		.head{
+			background-color: #E3E9FF;			
+			padding: 0;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		.panel{
+			margin: 0px;
+		}	
+		.saveTextBox{
+			width: 130px;
+			border: 1px solid #d4d4d4;
+		}
+		.cell{
+			width: 225px;
+		}
+		.toggleButton{
+			text-align: right;
+		}
+</ui:style>
+	
+	<g:DockLayoutPanel unit="PX" styleName="{style.panel}">
+		<g:north size="34">
+			<g:HTMLPanel styleName="{style.head}">
+				<table width="100%">
+					<tr>
+						<td><g:Label ui:field="panelLabel" text="{cc.infoPanelHeader}"/></td>
+						<td class="{style.toggleButton}"><g:Button ui:field="toggleInfoPanel">-</g:Button> </td>
+					</tr>
+				</table>				
+			</g:HTMLPanel>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel>
+				<g:Grid>
+					<g:row>
+						<g:customCell><g:Label text="{cc.harmonogramName}"/> </g:customCell>
+						<g:customCell>
+							<g:HTMLPanel>
+								<g:TextBox ui:field="harmonogramName" styleName="{style.saveTextBox}"/>
+								<g:Button ui:field="btnSaveHarmongramName" text="{cc.saveBtn}"/>
+							</g:HTMLPanel>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.chairman}"/></g:customCell>
+						<g:customCell><g:ListBox ui:field="predsedaListBox" styleName="{style.cell}"/> </g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.vicechairman}"/></g:customCell>
+						<g:customCell><g:ListBox ui:field="miestopredsedaListBox" styleName="{style.cell}"/> </g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.secretary}"/></g:customCell>
+						<g:customCell><g:ListBox ui:field="tajomnikListBox" styleName="{style.cell}"/> </g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.commissonMemers}"/></g:customCell>								
+						<g:customCell>
+							<g:ScrollPanel height="300px" width="225px" styleName="{res.applicationStyle.scrollPanel}">
+								<c:CellTable ui:field="membersCellTable" width="100%"/>
+							</g:ScrollPanel> 
+						</g:customCell>		
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.addProfesor}"/></g:customCell>			
+						<g:customCell>
+							<g:HorizontalPanel>
+								<g:ListBox ui:field="addProfessorListBox" styleName="{style.cell}" width="170px"/>
+								<g:Button ui:field="btnAddProfessor" text="{cc.addBtn}"/>
+							</g:HorizontalPanel>  
+						</g:customCell>
+					</g:row>		
+					<!-- <g:row>
+						<g:customCell><g:Label text="{cc.studyField}"/></g:customCell>
+						<g:customCell><g:ListBox ui:field="studyFieldListBoxIP" styleName="{style.cell}"/> </g:customCell>
+					</g:row> -->
+					<g:row>
+						<g:customCell><g:Label text="{cc.examPlace}"/></g:customCell>					
+						<g:customCell>
+							<g:HTMLPanel>
+								<g:ListBox ui:field="examPlaceListBox" styleName="{style.cell}"/>								
+							</g:HTMLPanel>
+						</g:customCell>
+					</g:row>
+					<g:row>
+						<g:customCell><g:Label text="{cc.examDate}"/></g:customCell>
+						<g:customCell><date:DateBox ui:field="examDate"/></g:customCell>
+					</g:row>
+				</g:Grid>
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 
